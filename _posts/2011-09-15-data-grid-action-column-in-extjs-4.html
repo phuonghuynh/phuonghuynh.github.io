@@ -1,0 +1,82 @@
+---
+layout: post
+title: Data grid action column in ExtJS 4
+date: 2011-09-15 04:11:43.000000000 +07:00
+categories:
+- ExtJS
+tags:
+- Action comlumn
+- ExtJS
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '26987276'
+  _wpas_skip_ms: '1'
+author: 
+---
+<p>I have been working with ExtJS 4 these days. The framework provides new MVC architecture help their sheeps to improve the flexibility of the application. Remember the Design Pattern principle "close to modify but open to extend".
+Ok, let go to the main point of this entry.</p>
+<p>To create an action column in a data-grid:
+{% highlight javascript %}
+columns: [
+   {
+      header : 'Name',
+      dataIndex : 'name',
+      width: 150,
+      editor: {allowBlank: false}
+   },
+   {
+      header : 'Email',
+      dataIndex : 'email',
+      flex: true,
+      editor: {allowBlank: false, vtype: 'email'}
+   },
+   {
+      xtype: 'actioncolumn',
+      width: 30,
+      align: 'center',
+      items: [
+         {
+            icon: 'images/delete.gif',
+            tooltip: 'Please delete me',
+            iconCls:'act-destroy',
+            handler: function(grid, rowIndex, colIndex) {
+               console.log(&quot;clicked on me!!!!&quot;);
+            }
+         }
+      ]
+   }
+]
+{% endhighlight %}
+
+In the controller, let detect what action is proceed:
+
+{% highlight javascript %}
+init: function() {
+   this.control({
+      'userlist actioncolumn': {
+         click: this.handleUserClickAction
+      }
+   });
+},
+handleUserClickAction: function(view, cell, rowIndex, colIndex, e) {
+   var m = e.getTarget().className.match(/\bact-(\w+)\b/);
+   if (m === null || m === undefined) {
+      return;
+   }
+   var action = m[1];
+   switch (action) {
+      case 'destroy':
+         var store = this.getStore('Users');
+         var store = this.getStore('Users');
+         var record = store.getAt(rowIndex);
+         store.remove(record);
+         break;
+   }
+}
+{% endhighlight %}
+
+I am sure this is an ugly way to detect an action. Hope to see any support from Secha team.</p>
+<p>PS:
+The stuff is available <a href="https://github.com:phuonghuynh/hello-ext">here </a></p>

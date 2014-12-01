@@ -1,0 +1,28 @@
+---
+layout: post
+title: Default welcome file without web.xml
+date: 2014-11-21 13:58:20.000000000 +07:00
+categories:
+- Github
+- Java
+- phuonghuynh
+- Spring
+tags:
+- annotation
+- configuration option
+- java
+- java config
+- spring
+- welcome file list
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '26987276'
+  geo_public: '0'
+  _publicize_pending: '1'
+author: 
+---
+<p>I love <a href="http://en.wikipedia.org/wiki/Single-page_application" title="SPI">SPA</a> so much. And I love to do coding in this way.<br />
+I used Spring Java based configuration option write most of my Spring configurations without XML but with the help of few Java-based annotations. In Servlets 3.0 you don't need a web.xml for many cases, however, sometimes it's required or just useful. This case is just one of them - there is no special annotations to define welcome-file list or error-pages. It is resolved as bellow:</p>
+<p>{% gist phuonghuynh/537f82975a10b5764eed %}</p>
