@@ -21,7 +21,7 @@ gaaccount: ''
 disqus: ''
 comments: true
 
-paginate: 3
+paginate: 10
 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

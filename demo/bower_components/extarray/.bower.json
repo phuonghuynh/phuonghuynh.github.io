@@ -1,0 +1,38 @@
+{
+  "name": "extarray",
+  "version": "0.0.2",
+  "main": "src/extarray.js",
+  "authors": [
+    "Phuong H <phuonghqh@gmail.com>"
+  ],
+  "description": "Javascript Array extension",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "javascript",
+    "array",
+    "extension"
+  ],
+  "license": "http://opensource.org/licenses/MIT",
+  "homepage": "https://github.com/phuonghuynh/extarray",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "049198e78f6a35f370464fda3c6f4dfb533e65c7"
+  },
+  "_source": "git://github.com/phuonghuynh/extarray.git",
+  "_target": "*",
+  "_originalSource": "extarray"
+}
