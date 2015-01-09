@@ -1,0 +1,23 @@
+---
+layout: post
+title: Spring Security 4x support Websocket
+date: 2015-01-08 04:11:43.000000000 +07:00
+categories:
+- Java
+- Spring
+tags:
+- Java
+- Spring
+status: publish
+type: post
+published: true
+author: phuonghuynh
+comments: true
+---
+
+<p>According to article <a href="http://spring.io/blog/2014/08/21/preview-spring-security-websocket-support">Preview Spring Security WebSocket Support</a>,
+  Spring Security 4x now fully support Web Socket => happy</p>
+<p>For people who wanna to see a complete example <a href="https://gist.github.com/phuonghuynh/857adec21c1cfd66b22a">Example Spring Security 4x support Web Socket</a></p>
+<p>Caution, by default Spring Security will be failed if there is a Reverse proxy on the server. To fix this, the server need
+to be configured to support Web Socket handshake. For example this is configuration of Nginx</p>
+<p>{% gist phuonghuynh/7d2f9c7ea5fd9ab04cef %}</p>
