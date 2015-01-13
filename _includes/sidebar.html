@@ -14,7 +14,7 @@
 
 <div class="sidebar">
   <h1 class="roboto-normal-bold">Recent posts</h1>
-  <ul class="roboto-normal">
+  <ul class="roboto-normal recent-posts">
     {% for post in site.posts %}
     <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}

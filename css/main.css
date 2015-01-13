@@ -63,3 +63,23 @@ a:visited {
 .author-social:visited {
   color: #4e4e4e;
 }
+
+.recent-posts, .recent-posts li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.recent-posts li {
+  margin: 1em 0 0 3em;
+  /*margin-left: 3em;*/
+  width: 90%;
+}
+
+.recent-posts li:before {
+  content: '\f188';
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+  color: rgba(79, 23, 23, 0.61);
+}

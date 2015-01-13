@@ -8,33 +8,10 @@ status: publish
 type: post
 published: true
 meta:
-author: 
+author:
 ---
-<p><a href="http://ivaynberg.github.io/select2">Select2</a> is a great component. This is just to keep track some useful information when doing configuration on it.</p>
+<p><a href="http://ivaynberg.github.io/select2">Select2</a> is a great component. This is just to keep track some useful
+  information when doing configuration on it.</p>
 <p>
-{% highlight javascript %}
-$(".searchText").select2({
-  width: "100%",
-  tags: tags, // => tagging support, allow use add new entry
-  tokenSeparators: [" "], // => to separate entries
-  formatSelection: instance.function (item) {
-    if (item.id === item.text) {
-      return "<div style='height: 16px;'>" + item.text + "</div>";
-    }
-    return "<img style='width: 16px; height: 16px;' src='images/" + item.logo + "'> " + item.text + " </img>";
-  }, // => "on select" : useful to handle "unidentified" entry (should return new tag)
-  formatResult: instance.formatItem, // => "after select" : useful to handle "unidentified" entry (should return new tag)
-  createSearchChoice: function (text) { // => find suitable tag
-    var tag = utils.findBy(tags, "text", text);
-    if (tag === undefined) {
-      tag = {id: text, text: text};
-    }
-    return tag;
-  },
-  createSearchChoicePosition: "bottom",
-  placeholder: "Enter to search...",
-  openOnEnter: false,
-  escapeMarkup: function (markup) { return markup; }
-});
-{% endhighlight %}
+  {% gist phuonghuynh/b9dcc9fa652f2e962f33 %}
 </p>

@@ -24,7 +24,7 @@ gaaccount: 'UA-29649728-1'
 disqus: 'phuonghqh'
 comments: true
 
-paginate: 10
+paginate: 5
 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
