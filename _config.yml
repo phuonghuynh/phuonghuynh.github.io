@@ -1,7 +1,7 @@
 # Site settings
 name: Phuong Huynh
 title: Coder
-email: phuonghqh @ gmail dot com
+email: phuonghqh <i class="fa fa-at"></i>gmail dot com
 description: An other technical blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://phuonghuynh.github.io" # the base hostname & protocol for your site

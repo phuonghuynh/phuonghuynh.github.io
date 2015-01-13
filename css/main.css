@@ -43,12 +43,12 @@ a:visited {
 
 .email {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   color: #111;
 }
 
 .email .fa {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .author-social {
@@ -85,4 +85,9 @@ a:visited {
   float: left;
   margin-left: -1.5em;
   color: rgba(79, 23, 23, 0.61);
+}
+
+.about-me {
+  text-align: justify;
+  margin-bottom: 60px;
 }
