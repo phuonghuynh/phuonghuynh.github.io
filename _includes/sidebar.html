@@ -1,16 +1,24 @@
-<div class="sidebar well">
-{{ site.description }}
+<div class="sidebar center">
+  <div class="me-photo-circular"></div>
+  <h3 class="roboto-large name">{{site.name}}</h3>
+  <span class="email roboto-normal">{{site.email}}</span>
+  <a href="http://stackoverflow.com/users/{{site.stackoverflow}}" class="author-social text-left" target="_blank">
+    <i class="fa fa-stack-overflow fa-lg"></i>Stackoverflow</a>
+  <a href="http://github.com/{{site.github}}" class="author-social text-left" target="_blank">
+    <i class="fa fa-github fa-lg"></i>Github</a>
+  <a href="https://twitter.com/{{site.twitter}}" class="author-social text-left" target="_blank">
+    <i class="fa fa-twitter-square fa-lg"></i>Twitter</a>
+  <a href="https://vn.linkedin.com/in/{{site.linkedin}}" class="author-social text-left" target="_blank">
+    <i class="fa fa-linkedin-square fa-lg"></i>LinkedIn</a>
 </div>
 
-<div class="sidebar well">
-    <h1>Recent Posts</h1>
-    <ul>
-        {% for post in site.posts limit:5 %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="sidebar">
+  <h1 class="roboto-normal-bold">Recent posts</h1>
+  <ul class="roboto-normal">
+    {% for post in site.posts %}
+    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
 
-<div class="sidebar well">
-{% include links-list.html %}
-</div>
+
