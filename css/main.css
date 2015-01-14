@@ -1,11 +1,8 @@
-a {
-  text-decoration: none;
-  color: #343434;
-}
+/*a {*/
+  /*text-decoration: none;*/
+  /*color: #343434;*/
+/*}*/
 
-a:visited {
-  color: #4e4e4e;
-}
 
 .name {
   font-weight: bold;
@@ -76,6 +73,10 @@ a:visited {
 /*.author-social:visited {*/
 /*color: #4e4e4e;*/
 /*}*/
+
+.recent-posts a:visited {
+  color: #4e4e4e;
+}
 
 .recent-posts, .recent-posts li {
   padding: 0;
