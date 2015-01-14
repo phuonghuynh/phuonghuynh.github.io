@@ -6,10 +6,24 @@ description: An other technical blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://phuonghuynh.github.io" # the base hostname & protocol for your site
 
-github:  phuonghuynh
-linkedin:  phuonghqh
-twitter: phuonghqh
-stackoverflow: 4299043/phuong
+#github:  phuonghuynh
+#linkedin:  phuonghqh
+#twitter: phuonghqh
+#stackoverflow: 4299043/phuong
+
+socials:
+  -
+    network: github
+    profile: http://github.com/phuonghuynh
+  -
+    network: linkedin
+    profile: https://vn.linkedin.com/in/phuonghqh
+  -
+    network: twitter
+    profile: https://twitter.com/phuonghqh
+  -
+    network: stack-overflow
+    profile: http://stackoverflow.com/users/4299043/phuong
 
 markdown: redcarpet
 highlighter: pygments
