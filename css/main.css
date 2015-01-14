@@ -6,7 +6,7 @@
 
 .name {
   font-weight: bold;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 .roboto-large {
@@ -36,6 +36,8 @@
   width: 170px;
   height: 170px;
   border-radius: 85px;
+  border: double 15px rgba(255,255,255,0.7);
+  background-clip: padding-box;
   -webkit-border-radius: 85px;
   -moz-border-radius: 85px;
   background: url(../images/me.png) no-repeat;
@@ -44,6 +46,16 @@
   /*-webkit-filter: sepia(50%);*/
   cursor: pointer;
 }
+
+/*.circle{*/
+  /*width: 100px;*/
+  /*height: 100px;*/
+  /*padding: 50px;*/
+  /*border-radius: 200px;*/
+  /*border: double 15px rgba(255,255,255,0.7);*/
+  /*background: rgba(255,255,255,0.7);*/
+  /*background-clip: padding-box;*/
+/*}*/
 
 .center {
   text-align: center;
@@ -102,6 +114,7 @@
 .about-me {
   text-align: justify;
   margin-bottom: 60px;
+  font-style: italic;
 }
 
 .pagination {
