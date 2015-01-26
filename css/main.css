@@ -131,6 +131,9 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  -webkit-justify-content: center;
+  /*-webkit-align-content: center;*/
+  /*-webkit-align-items: center;*/
 }
 
 a.author-social {
