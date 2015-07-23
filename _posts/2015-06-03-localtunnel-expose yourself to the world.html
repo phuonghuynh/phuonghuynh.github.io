@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Localtunnel
-date: 2015-06-03 04:11:43.000000000 +07:00
+date: 2015-07-23 04:11:43.000000000 +07:00
 categories:
 - Server
 tags:
-- localtunnel
+- ssh
 status: publish
 type: post
 published: true
@@ -13,6 +13,10 @@ author: phuonghuynh
 comments: true
 ---
 
+<p>SSH to server without entering password</p>
+<code>
+  $ ssh-keygen
+  $ ssh-copy-id -i root@ip_address
+  $ ssh root@ip_address
+</code>
 
-<p><a href="http://localtunnel.me/" >Localtunnel</a> is very awesome</p>
-<p>It allows you to easily share a web service on your local development machine without messing with DNS and firewall settings.</p>
