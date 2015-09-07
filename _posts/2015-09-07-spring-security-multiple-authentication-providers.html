@@ -1,0 +1,28 @@
+---
+layout: post
+title: Spring Security - Multiple Authentication Providers
+date: 2015-01-08 04:11:43.000000000 +07:00
+categories:
+- Java
+- Spring
+- Security
+tags:
+- Java
+- Spring
+- Security
+status: publish
+type: post
+published: true
+author: phuonghuynh
+comments: true
+---
+
+<p>
+  Example how to configure Spring Security to support multiple Authentication Providers.
+</p>
+<p>We have 2 Authentication Providers:</p>
+<ul>
+  <li>InternalAuthenticationProvider - for from-login with username & password parametters</li>
+  <li>AuthenticationTokenProvider - for the login by token string</li>
+</ul>
+{% gist phuonghuynh/6bbd04291958895ec2da %}</p>
