@@ -41,7 +41,6 @@
   -webkit-border-radius: 85px;
   -moz-border-radius: 85px;
   background: url(../images/me.png) no-repeat;
-  opacity: 0.8;
   filter: alpha(opacity=80);
   /*-webkit-filter: sepia(50%);*/
   cursor: pointer;
