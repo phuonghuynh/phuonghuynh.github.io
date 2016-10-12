@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="https://www.skycrypt.com/support/skycrypt_update/"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <language>en</language>      
+         <item>
+            <sparkle:releaseNotesLink>https://storage.googleapis.com/media.datalocker.com/downloads/safecrypt/macos/changelog_mac.txt</sparkle:releaseNotesLink>
+            <!--link>https://media.datalocker.com/downloads/safecrypt/macos/DataLocker_SafeCrypt.dmg</link-->
+             <!--sparkle:version>161003</sparkle:version-->
+             <!--sparkle:shortVersionString>1.2.1</sparkle:shortVersionString-->
+            <enclosure url="https://media.datalocker.com/downloads/safecrypt/macos/DataLocker_SafeCrypt.dmg" sparkle:version="161003" 
+                       sparkle:shortVersionString="1.2.1" type="application/octet-stream" />
+         </item>
+   </channel>
+</rss>
