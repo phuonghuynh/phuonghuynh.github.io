@@ -1,0 +1,85 @@
+---
+layout: post
+title: Electron Application crash on macOS
+date: 2024-03-18 04:11:43.000000000 +07:00
+categories:
+- Electron
+- macOS
+- App singing
+- Notarize App
+tags:
+- Electron
+- macOS
+- Sign
+status: publish
+type: post
+published: true
+author: phuonghuynh
+comments: true
+---
+
+<p>
+  To fix production build crash issues on macOS because of:
+    - GPU loading
+    - Network loading
+    - Keychain API inaccessible
+    - Other crash error from Electron Chromium on macOS
+</p>
+<p>
+  To note and help someone get crash error in Electron macOS production builds (all run well in development mode).
+    - Check Application "entitlements.plist" file by `codesign -d --entitlements - --xml {.app path}`
+    - Check every entry in that file if it needed, in common case, this `entitlements.plist` will work.
+      ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+        <dict>
+          <key>com.apple.security.cs.allow-jit</key>
+          <true/>
+          <key>com.apple.security.device.audio-input</key>
+          <true/>
+          <key>com.apple.security.device.bluetooth</key>
+          <true/>
+          <key>com.apple.security.device.camera</key>
+          <true/>
+          <key>com.apple.security.device.print</key>
+          <true/>
+          <key>com.apple.security.device.usb</key>
+          <true/>
+          <key>com.apple.security.personal-information.location</key>
+          <true/>
+        </dict>
+      </plist>
+      ```
+    - To enable Keychain API:
+      ```xml
+      ...
+      <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+      <true/>
+      <key>com.apple.security.cs.disable-executable-page-protection</key>
+      <true/>
+      <key>com.apple.security.cs.disable-library-validation</key>
+      <true/>
+      <key>keychain-access-groups</key>
+      <array>
+        <string>{your application-identifier}</string>
+      </array>
+      ```
+    - Disable Electron Builder signing step (set env CSC_IDENTITY_AUTO_DISCOVERY=false), add script "after-sign.js" and configure Electron Builder to call it to do:
+      - Signing steps
+      - Notarize app
+      - Create final DMG file
+    - Add mac config to Electron Builder to include keychain groups defined in entitlements.plist
+      ```
+        conf.mac.extendInfo = {
+          "keychain-access-groups": [
+            `{your application-identifier}`,
+          ]
+        }
+      ```
+</p>
+
+Script "after-sign.js:
+{% gist phuonghuynh/80a32ffc9ee99ed50fda562bb8ce92c1 %}</p>
+
+Hope you found this useful!
